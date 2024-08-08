@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, Button } from 'react-native';
+import LottieTest from './LottieTest';
 
 const ResultScreen = ({ route, navigation }) => {
   const { result, baseNumber, newNumber } = route.params;
@@ -9,8 +10,8 @@ const ResultScreen = ({ route, navigation }) => {
       <Text style={styles.resultText}>
         {result === 'won' ? "GG t'es le goat" : "T'es éclaté le sang"} le nombre c'était {baseNumber} et t'as eu {newNumber}
       </Text>
-      {result === 'won' && <Text style={styles.trophy}>🏆</Text>}
-      {result !== 'won' && <Text style={styles.trophy}>❌</Text>}
+      {result === 'won' && <Text style={styles.trophy}><LottieTest name="winner" /></Text>}
+      {result !== 'won' && <Text style={styles.trophy}><LottieTest name="looser" /></Text>}
       <Button title="Play Again" onPress={() => navigation.navigate('Home')} />
     </View>
   );

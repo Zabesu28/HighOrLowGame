@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "highOrLowerGame",
-    "slug": "highOrLowerGame",
+    "name": "HighOrLowGame",
+    "slug": "HighOrLowGame",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

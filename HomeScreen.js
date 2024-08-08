@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Alert } from 'react-native';
+import AnimatedButton from './AnimatedButton';
 
 const HomeScreen = ({ navigation }) => {
   const startGame = () => {
@@ -8,13 +9,7 @@ const HomeScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity 
-        style={styles.startButton} 
-        onLongPress={() => navigation.navigate('Game')}
-        onPress={startGame}
-      >
-        <Text style={styles.startButtonText}>Start game!</Text>
-      </TouchableOpacity>
+       <AnimatedButton onPress={startGame} navigation={navigation} />
     </View>
   );
 };
